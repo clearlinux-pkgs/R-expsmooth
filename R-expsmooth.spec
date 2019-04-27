@@ -4,7 +4,7 @@
 #
 Name     : R-expsmooth
 Version  : 2.3
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Summary  : Data Sets from "Forecasting with Exponential Smoothing"
