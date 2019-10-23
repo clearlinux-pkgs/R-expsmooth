@@ -4,17 +4,17 @@
 #
 Name     : R-expsmooth
 Version  : 2.3
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Summary  : Data Sets from "Forecasting with Exponential Smoothing"
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-forecast
-Requires: R-munsell
 BuildRequires : R-forecast
 BuildRequires : R-munsell
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 Hyndman, Koehler, Ord and Snyder (Springer, 2008).
@@ -27,10 +27,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562196827
+export SOURCE_DATE_EPOCH=1571826193
 
 %install
-export SOURCE_DATE_EPOCH=1562196827
+export SOURCE_DATE_EPOCH=1571826193
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
