@@ -4,7 +4,7 @@
 #
 Name     : R-expsmooth
 Version  : 2.3
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/expsmooth_2.3.tar.gz
 Summary  : Data Sets from "Forecasting with Exponential Smoothing"
@@ -12,30 +12,29 @@ Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-forecast
 BuildRequires : R-forecast
-BuildRequires : R-munsell
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 Hyndman, Koehler, Ord and Snyder (Springer, 2008).
 
 %prep
 %setup -q -c -n expsmooth
+cd %{_builddir}/expsmooth
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571826193
+export SOURCE_DATE_EPOCH=1589771950
 
 %install
-export SOURCE_DATE_EPOCH=1571826193
+export SOURCE_DATE_EPOCH=1589771950
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
